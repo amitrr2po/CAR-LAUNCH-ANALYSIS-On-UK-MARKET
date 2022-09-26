@@ -26,6 +26,8 @@ SELECT * FROM hyndai) as t ;
 
 select * from CARS_DATA
 
+
+
 ###--A.Create an analysis to find income class of UK citizens based on price of Cars:
 ###--(You can use per-capita income in UK from internet sources):
 
@@ -43,6 +45,8 @@ select * from income_buckets
 drop table income_buckets
 
 
+
+
 ###--A.a.
 
 select income_bucket, count(model_id) as total_car from income_buckets group by income_bucket
@@ -52,6 +56,9 @@ order by income_bucket;
 
 select year, income_bucket, count(model_id) as total_car from income_buckets group by year, income_bucket
 order by year desc, income_bucket desc;
+
+
+
 
 ###--B.
 
@@ -63,11 +70,14 @@ else 50000
 end as Range_of_price into per_capita from CARS_DATA
 
 
+
 ###--b. bucket according to car_price:
 
 select count(model_id) as total_car, range_of_price from per_capita  
 where range_of_price is not null
 group by Range_of_price order by range_of_price asc;
+
+
 
 ###--b.a category(trend fueltype wise top selling):
 
@@ -77,6 +87,8 @@ where range_of_price is not null
 group by year, Range_of_price, B.fueltype
 order by count(model_id)desc;
 
+
+
 ###--B.b. category(transmission):
 
 SELECT YEAR,COUNT(A.MODEL_ID) AS TOTAL_CARS, transmission FROM CARS_DATA AS A
@@ -84,12 +96,17 @@ INNER JOIN transmission AS B ON B.ID = A.transmission_ID
 GROUP BY YEAR, transmission
 ORDER BY year desc, transmission desc, COUNT(A.MODEL_ID) DESC;
 
+
+
+
 ###--trend transmission, mileage wise top selling:
 
 SELECT YEAR,COUNT(A.MODEL_ID) AS TOTAL_CARS, transmission, mileage FROM CARS_DATA AS A
 INNER JOIN transmission AS B ON B.ID = A.transmission_ID
 GROUP BY YEAR, transmission, mileage
 ORDER BY COUNT(A.MODEL_ID) DESC;
+
+
 
 ###--AVG_TAX YEAR WISE:
 
@@ -102,8 +119,12 @@ select * from per_capita
 
 select * from CARS_DATA;
 
+
+
+
+
 ###--c. Find relationship between fuel efficiency & price of car/sales of car/fuel type/, etc.
-SELECT YEAR, MPG, PRICE, TAX:
+SELECT YEAR, MPG, PRICE, TAX
 
 
 ###--TREND PRICE_WISE :
@@ -126,7 +147,7 @@ GROUP BY TRANSMISSION_ID, TRANSMISSION, YEAR ORDER BY YEAR DESC, COUNT(TRANSMISS
 
 
 
-## avg. across the year in tax:
+### avg. across the year in tax:
 
 --2021 = AVG_TAX(
 --2020 = AVG_TAX(145)
