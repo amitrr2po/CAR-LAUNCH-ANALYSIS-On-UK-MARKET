@@ -1,5 +1,11 @@
 # CAR-LAUNCH-ANALYSIS-On-UK-MARKET
   Project on "CAR LAUNCH ANALYSIS On UK MARKET" in a database management system called SQL and discovered insights from the data set that would help the customer      launch a car in the U.K
+  
+# Original data_set that help me to extract the needfull insights
+----https://drive.google.com/drive/folders/13NZvKx79ePA_1KEANav8mD0xX-DgNilW?usp=sharing
+  
+# Here you get the main code sql file which you can run into your local server to get the all insights abd also if you want to add something feel free to use
+----https://drive.google.com/file/d/1HYlwG4kLNtrf-x0rvJeSbP_YPnBNt8TO/view?usp=sharing
 
 ## I have write this code to extract the insights from data set by using MS SQL server: 
    
@@ -168,3 +174,6 @@
     --2011 = AVG_TAX(172)
     --2010 = AVG_TAX(189)
     --2009 = AVG_TAX(217)
+    
+# Here you get the main code sql file which you can run into your local server to get the all insights abd also if you want to add something feel free to use
+----
